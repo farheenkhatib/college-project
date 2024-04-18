@@ -1,0 +1,465 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 90px;
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-height: 80px;
+    padding-left: 40px;
+}
+
+nav ul {
+    padding-right: 30px;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+    /*font class*/
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 26, 255); /* Default color */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+nav a:hover {
+    color: pink; /* Color change on hover */
+}
+
+/*banner*/
+
+
+.bold_heading{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.245rem;
+    /*font class*/
+        font-family: "Slabo 27px", serif;
+        font-weight: 400;
+        font-style: normal;
+  }
+
+  .for-teens{
+    margin-top: 20px;
+    text-align: center;
+    /*font class*/
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .paragraph_individual{
+    margin-left: 80px;
+    font-size: 1.2rem;
+    margin-top: 70px;
+    padding-right: 150px;
+    /*font class*/
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    /**/
+    line-height: 1.56;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.left {
+    flex-basis: 50%;
+    padding-right: 40px;
+}
+
+.right-grid-container {
+  display: inline-block; /* Display as inline-block to align it horizontally */
+  transform: skewY(-5deg); /* Apply skew transformation */
+}
+
+.right-grid {
+    margin-right: 60px;
+    display: grid;
+    grid-template-columns: repeat(2,1 fr);
+    justify-content: space-between;
+    
+
+    background-image: linear-gradient(to right, #DEFCF9 0%, #B0DEFF 51%, #DEFCF9 100%);
+    padding: 40px;
+    margin-top: 40px;
+    height: 250px;
+  }
+
+.right-grid img {
+  max-width: 50%;
+  height: 150px;
+  margin-right: 90px;  
+}
+
+.row-1 {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.row-2{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.img-1{
+
+  height: 90px;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 80px;
+}
+
+.img-2{
+  height: 90px;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 80px;
+}
+
+.img-3{
+  height: 90px;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 80px;
+}
+
+
+.img-4{
+  height: 90px;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 80px;
+}
+
+
+.fade {
+  animation: fadeSlideEffect 9s infinite;
+}
+
+@keyframes fadeSlideEffect {
+  0% { opacity: 0; transform: translateX(100%); }
+  25% { opacity: 1; transform: translateX(0%); }
+  75% { opacity: 1; transform: translateX(0%); }
+  100% { opacity: 0; transform: translateX(-100%); }
+}
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+
+/*quiz*/
+.quiz{
+  margin-top: 80px;
+  margin-left: 350px;
+  width: 700px;
+}
+
+.quiz-main-container {
+  border: 1px solid #000000; /* Border around the entire quiz container */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quiz-container {
+  text-align: center;
+}
+
+#question-container{
+  background-color: #fbfdff;
+}
+
+.question {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.answer-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.answer-options select {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#submit, #ok-btn {
+  margin-left: 320px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover, #ok-btn:hover {
+  background-color: #45a049;
+}
+
+.submissionMessage {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+hr{
+  border-color: black;
+}
+
+
+/* Pop-up message styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensure it's on top of other elements */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/*tracking mood*/
+/* Main container */
+.main-mood-tracker {
+  margin-top: 90px;
+  margin-left: 400px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Mood Tracker Title */
+.mood-tracker {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  animation: slideInDown 1s ease forwards;
+}
+
+/* Mood Form */
+.mood-form {
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease forwards;
+}
+
+
+#mood-tracker {
+  position: relative;
+}
+
+.circle1 {
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: lightblue; /* Adjust color as needed */
+  z-index: -1; /* Place the circle behind other content */
+}
+
+.circle2 {
+  position: absolute;
+  top: 32%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: lightblue; /* Adjust color as needed */
+  z-index: -1; /* Place the circle behind other content */
+}
+
+.circle4 {
+  position: absolute;
+  top: 33%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: lightblue; /* Adjust color as needed */
+  z-index: -1; /* Place the circle behind other content */
+}
+
+.circle3 {
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: lightblue; /* Adjust color as needed */
+  z-index: -1; /* Place the circle behind other content */
+}
+
+.circle5 {
+  position: absolute;
+  top: 86%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: lightblue; /* Adjust color as needed */
+  z-index: -1; /* Place the circle behind other content */
+}
+
+
+.circle6 {
+  position: absolute;
+  top: 80%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: lightblue; /* Adjust color as needed */
+  z-index: -1; /* Place the circle behind other content */
+}
+
+
+
+
+
+.mood-form label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
+
+.mood-form select {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 20px; /* Rounded shape */
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.mood-form select:hover,
+.mood-form select:focus {
+  border-color: #007bff;
+}
+
+.mood-form button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px; /* Circular shape */
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.mood-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Mood Solutions and Mood History */
+.mood-solutions, .mood-history {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px; /* Rounded shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: slideInUp 1s ease forwards;
+}
+
+.mood-solutions h2, .mood-history h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#solutionsContainer, #moodList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#solutionsContainer li, #moodList li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#solutionsContainer li:hover, #moodList li:hover {
+  background-color: #f0f0f0;
+}
+
+#solutionsContainer li:last-child, #moodList li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
